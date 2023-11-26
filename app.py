@@ -1,52 +1,20 @@
-from flask import Flask, request, jsonify
+from authenticate import *
 import os
-
-from deepface import DeepFace
-import cv2
-
-
-def face_verify(image1, image2):
-    obj = DeepFace.verify(image1, image2, 
-                          model_name = 'ArcFace', 
-                          detector_backend = 'retinaface')
-    return obj["verified"]
-
-
-def authenticate(video, id_image):
-
-    # Capture the frames, resize each frame
-    cap = cv2.VideoCapture(video)
-    frames = []
-    while True:
-        success, frame = cap.read()
-        if not success:
-            break
-    
-        frame = cv2.resize(frame, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_LINEAR)
-        frames.append(frame)
-    
-    num_frames = len(frames)
-
-    # Face verification
-    # Performs face verification every 50 frames, returns False if at least one returns false.
-    for i in range(0, num_frames, 50):
-
-        if(not face_verify(frames[i], id_image)):
-            return False
-    
-    return True
-
-
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+
+@app.route('/')
+def base():
+    return "yes"
 
 @app.route('/upload', methods=['POST'])
 def upload():
     video_file = request.files.get('video')
     image_file = request.files.get('image')
     
-    if not video_file or not image_file:
-        return jsonify({'error': 'Please provide both video and image files'}), 400
+    if not video_file and not image_file:
+        return jsonify({'error': 'No data received'}), 400
 
     video_path = os.path.join('uploads', video_file.filename)
     video_file.save(video_path)
