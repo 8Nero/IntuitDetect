@@ -1,10 +1,9 @@
-DeepFake Video Detection for Bank Applications
-Project Logo/Image Here
+# IntuitDetect
 
 This project aims to tackle the challenge of deepfake videos within bank applications. The system employs a multi-step verification process involving facial recognition, facial expression tracking, and lip reading to ensure the authenticity of user-submitted videos.
 
-Overview
-Problem Statement
+## Overview
+### Problem Statement
 In today's digital age, deepfake videos pose a significant threat, especially in sensitive areas like banking applications. It becomes crucial to ensure that videos submitted by users are authentic and not manipulated.
 
 Solution
