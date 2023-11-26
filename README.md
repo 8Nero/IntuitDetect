@@ -31,13 +31,13 @@ Lip Reading Integration: Audio-based verification by synchronizing lip movements
 
 # Usage
 ## Requirements
-Python 3.x
-Libraries: Deepfake, face-alignment
+Python 3.9
+Libraries: Deepface, face-alignment
 
 ## Installation
 Copy code
 ```
-git clone https://github.com/your_username/your_repository.git
+git clone https://github.com/8Nero/IntuitDetect.git
 cd your_repository
 pip install -r requirements.txt
 ```
