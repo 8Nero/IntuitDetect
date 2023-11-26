@@ -1,6 +1,6 @@
 # IntuitDetect
 
-[Demo][https://github.com/SotaNoniwa/Deepfake-detection]
+[Demo interface](https://github.com/SotaNoniwa/Deepfake-detection)
 
 This project aims to tackle the challenge of deepfake videos within bank applications. The system employs a multi-step verification process involving facial recognition, facial expression tracking, and lip reading to ensure the authenticity of user-submitted videos.
 
