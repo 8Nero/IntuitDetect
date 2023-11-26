@@ -21,6 +21,12 @@ We perform a face similarity check between the ID card image and every 50th fram
 Utilizing deep learning based face tracker models, we track facial expressions throughout the video.
 The system detects unnatural movements or discrepancies in facial expressions.
 
+<p float="left">
+  <img src="uploads/demo_trackers.gif" width="300" />
+  <img src="image2.gif" width="300" /> 
+  <img src="image3.gif" width="300" />
+</p>
+
 ## Lip Reading for Audio Verification:
 
 Implementing lip reading techniques to analyze and verify audio data synced with the video.
